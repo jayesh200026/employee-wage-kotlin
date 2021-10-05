@@ -6,13 +6,11 @@ object wageConstants {
     const val PART_TIME_HOUR = 4
 }
 
-fun computeDailyWage(employee: Int):Int {
-    var dailyWage = 0
-    if (employee == employeeConstants.IS_FULL_TIME) {
-        dailyWage = wageConstants.WAGE_PER_HOUR * wageConstants.FULL_DAY_HOUR
-    }
-    else if(employee == employeeConstants.IS_PART_TIME){
-        dailyWage = wageConstants.WAGE_PER_HOUR * wageConstants.PART_TIME_HOUR
+fun computeDailyWage(employee: Int): Int {
+    val dailyWage = when (employee) {
+        employeeConstants.IS_FULL_TIME -> wageConstants.WAGE_PER_HOUR * wageConstants.FULL_DAY_HOUR
+        employeeConstants.IS_PART_TIME -> wageConstants.WAGE_PER_HOUR * wageConstants.PART_TIME_HOUR
+        else -> 0
     }
     println("Employee daily wage is $dailyWage")
     return dailyWage

@@ -5,7 +5,6 @@ object employeeConstants {
 }
 
 fun attendance(): Int {
-    //val check = (Math.floor(Math.random() * 10) % 2).toInt()
     val check = (0..1).random()
     if (check == employeeConstants.IS_PRESENT) {
         println("Present")

@@ -13,6 +13,8 @@ object constants {
 
 fun main() {
     println("Welcome to employee wage computation")
-    EmployeeWage.computeWage("Amazon",50,90,20)
-    EmployeeWage.computeWage("Google",40,80,15)
+    var amazon=EmployeeWage("Amazon",50,90,20)
+    amazon.computeWage()
+    var google=EmployeeWage("Google",40,80,15)
+    google.computeWage()
 }

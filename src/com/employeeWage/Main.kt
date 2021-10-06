@@ -13,5 +13,5 @@ object constants {
 
 fun main() {
     println("Welcome to employee wage computation")
-    wageTillCondition()
+    EmployeeWage.computeWage()
 }

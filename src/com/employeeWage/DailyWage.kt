@@ -14,7 +14,6 @@ class DailyWage {
                 )
                 else -> Pair(0, 0)
             }
-            println("Employee daily wage is ${dailyWage.first}")
             return dailyWage
         }
     }

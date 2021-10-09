@@ -26,4 +26,15 @@ class EmployeeWageBuilder : ComputeEmployeeWage {
             println(i)
         }
     }
+
+    fun getTotalWage(company: String): Int {
+        for (i in employeeArray) {
+            if (company == i.companyName) {
+                println("Total wage of $company is ${i.totalWage}")
+                return i.totalWage
+            }
+        }
+        println("Company name not found")
+        return -1
+    }
 }

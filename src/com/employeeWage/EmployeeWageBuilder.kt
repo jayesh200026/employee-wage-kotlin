@@ -1,7 +1,7 @@
 package com.employeeWage
 
 class EmployeeWageBuilder : ComputeEmployeeWage {
-    var employeeArray = mutableListOf<CompanyEmployeeWage>()
+    var employeeArray = arrayListOf<CompanyEmployeeWage>()
 
     override fun addCompany(companyName: String, ratePerHour: Int, maximumHour: Int, maximumDays: Int) {
         employeeArray.add(CompanyEmployeeWage(companyName, ratePerHour, maximumHour, maximumDays))

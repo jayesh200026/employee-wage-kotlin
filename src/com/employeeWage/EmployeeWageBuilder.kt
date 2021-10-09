@@ -1,13 +1,13 @@
 package com.employeeWage
 
-class EmployeeWageBuilder {
+class EmployeeWageBuilder : ComputeEmployeeWage {
     var employeeArray = mutableListOf<CompanyEmployeeWage>()
 
-    fun addCompanyEmpWage(companyName: String, ratePerHour: Int, maximumHour: Int, maximumDays: Int) {
+    override fun addCompany(companyName: String, ratePerHour: Int, maximumHour: Int, maximumDays: Int) {
         employeeArray.add(CompanyEmployeeWage(companyName, ratePerHour, maximumHour, maximumDays))
     }
 
-    fun computeEmpWage() {
+    override fun computeEmpWage() {
         for (i in employeeArray) {
             var time = 0
             var days = 0

@@ -14,10 +14,13 @@ class EmployeeWageBuilder : ComputeEmployeeWage {
             var totalWage = 0
 
             while (time < i.maximumHour && days < i.maximumDays) {
-                val (wage, hours) = DailyWage.computeDailyWage(attendance(), i.ratePerHour)
-                totalWage += wage
-                time += hours
+
                 days += 1
+                val (wage, hours) = DailyWage.computeDailyWage(attendance(), i.ratePerHour)
+                time += hours
+                i.dailyWage = wage
+                totalWage += wage
+                println("Day:: $days Working Hour::$hours Daily wage=${i.dailyWage}")
             }
             i.totalWage = totalWage
             println(i)

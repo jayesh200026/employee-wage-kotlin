@@ -15,4 +15,6 @@ fun main() {
     companyBuilder.addCompany("Google", 30, 90, 20)
     companyBuilder.addCompany("Amazon", 40, 80, 18)
     companyBuilder.computeEmpWage()
+    companyBuilder.getTotalWage("Google")
+  
 }

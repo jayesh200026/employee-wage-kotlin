@@ -12,7 +12,7 @@ object constants {
 fun main() {
     println("Welcome to employee wage computation")
     val companyBuilder = EmployeeWageBuilder()
-    companyBuilder.addCompanyEmpWage("Google", 30, 90, 20)
-    companyBuilder.addCompanyEmpWage("Amazon", 40, 80, 18)
+    companyBuilder.addCompany("Google", 30, 90, 20)
+    companyBuilder.addCompany("Amazon", 40, 80, 18)
     companyBuilder.computeEmpWage()
 }
